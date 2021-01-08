@@ -1,0 +1,27 @@
+<div class="col-md-16">
+    <div class="card right-profile">
+        <div class="profile">
+            <img src="../../../assets/img/marc.jpg" alt="profile" />
+        </div>
+        <h6>student</h6>
+        <h4 *ngIf="!!member">{{member.firstName}} {{member.lastName}}</h4>
+        <div class="table-responsive" *ngIf=" !!publications">
+            <table class="table">
+                <thead class="text-primary">
+                    <tr>
+                        <th>publication</th>
+                        <th>date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let publication of publications">
+                            <td>{{publication.titre}}</td>
+                        <td>{{publication.date}}</td>
+
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+
+    </div>
